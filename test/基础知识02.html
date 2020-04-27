@@ -1,0 +1,171 @@
+<!--tips：
+        shift+enter：重新开始一行-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>标签</title>
+</head>
+<body>
+    <!--标签通用属性-->
+    <!--id-->
+    <p id="p1">段落1</p>
+    <p id="p2">段落2</p>
+    <!--class-->
+    <div class="test">div</div>
+    <p class="test">p</p>
+    <!--style-->
+    <p style="color:red;width: 200px;border: 1px solid #0000ff;">这是一次style测试</p>
+    <!--title-->
+    <p title="测试">test</p>
+
+
+    <!--table-->
+    <!--table>tr*2>td{内容$}*3-->
+    <table border="1" width="400" cellspacing="0" cellpadding="10" align="center">
+        <tr>
+            <th>学号</th> <!--th:表头，对下面内容进行说明。th的内容会自动加粗并居中-->
+            <th>姓名</th>
+            <th>地址</th>
+        </tr>
+        <tr>
+            <td>内容1</td>
+            <td>内容2</td>
+            <td>内容3</td>
+        </tr>
+    </table>
+    <br><br><br>
+
+    <!--表格中的rowspan-->
+    <!--Emmet语法：table[border=1 width=500 align=center]>tr*3>td{content$$}*3-->
+    <table border="1" width="500" align="center">
+        <!--tr -> colspan, td -> rowspan-->
+        <tr align="center" valign="middle">
+            <td rowspan="2">content01</td> <!--valign: vertical align(top/middle/bottom)-->
+            <td>content02</td>
+            <td rowspan="3">content03</td>
+        </tr>
+        <tr>
+            <td>content02</td>
+        </tr>
+        <tr align="center">
+            <td>content01</td>
+            <td>content02</td>
+        </tr>
+    </table>
+    <br><br><br>
+
+    <!--完整表格-->
+    <!--table[border=1 width=600 align=center]>(caption{student information})+(thead>tr>th*4)+(tbody>tr*3>td*4)+(tfoot>tr>td[colspan=1])-->
+    <table border="1" width="600" align="center">
+        <caption>student information</caption>
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Grade</th>
+            <th>address</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td align="center">001</td>
+            <td>Tom</td>
+            <td>A</td>
+            <td>asdlfkjaldkla</td>
+        </tr>
+        <tr>
+            <td align="center">002</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td align="center">003</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        </tbody>
+        <tfoot>
+        <tr>
+            <td colspan="4">lalalalalala~~</td>
+        </tr>
+        </tfoot>
+    </table>
+    <br><br><br>
+
+    <!--form表单标签，用来实现前后端交互的一个重要标签-->
+    <form name="stdInfor" action="http://baidu.com" method="get"> <!--get会暴露信息到地址栏，post并不会-->
+        <input type="text" name="name" placeholder="please enter your name">
+        <input type="submit">
+
+        <!--表单元素-->
+        <!--input-->
+        <form action="">
+            <input type="text">
+        </form>
+
+        <!--radio-->
+        <input type="radio" name="sex" checked="checked">male <!--加上默认选项-->
+        <input type="radio" name="sex">female <!--有name可以相互排斥-->
+        <br><br><br>
+
+        <!--复选框/检查框-->
+        <input type="checkbox" name="hobby">music
+        <input type="checkbox" name="hobby">coding
+        <input type="checkbox" name="hobby">other
+        <br>
+
+        <!--文件上传-->
+        <input type="file"><br>
+
+        <!--button-->
+        <input type="button" value="登录"><br>
+
+        <!--image-->
+        <input type="image" src="" title="refresh"><br>
+
+        <!--reset-->
+        <input type="reset" value="cancel"><br>
+
+        <!--textarea文本域-->
+        <textarea name="memo" id="memo" cols="30" rows="10">默认值</textarea><br>
+
+        <!--select-->
+        <label for="sex">性别：</label>
+        <select id="sex">
+            <option value="male">male</option>
+            <option value="female">female</option>
+        </select>
+
+        <label for="course">学科：</label>
+        <select id="course" multiple size="2"> <!--有multiple可以实现多选,size最多显示的行数-->
+            <option value="语文">chinese</option>
+            <option value="math">math</option>
+            <option value="english">english</option>
+            <option value="cmput">cmput</option>
+        </select>
+        <br>
+
+        <!--button-->
+        <button id="btnOk">confirm</button> <!--这里的button主要用来调用js代码-->
+        <form action="test.aspx">
+            <button>提交</button><!--这里与input中submit功能相同-->
+        </form>
+        <br>
+
+    </form>
+    <br><br><br>
+
+    <!--iframe-->
+    <!--banner-->
+    <iframe src="iframe/banner.html" frameborder="0" scrolling="no" width="100%"></iframe>
+    <!--navigator-->
+    <iframe src="iframe/nav.html" frameborder="0" scrolling="auto" width="30%" height="300px"></iframe>
+    <!--content-->
+    <iframe src="iframe/content1.html" name="main" frameborder="0" scrolling="no" width="70%" height="300px"></iframe>
+
+
+</body>
+</html>

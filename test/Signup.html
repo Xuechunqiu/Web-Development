@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Signup</title>
+</head>
+<body>
+    <h1>Sign Up</h1>
+    <form action="">
+        <label for="account">Account: </label>
+        <!--can just write <label>Account: </label>-->
+        <input id="account" type="text" name="account" placeholder="please input your account">
+        <br>
+
+        <label for="email">Email: </label>
+        <input id="email" type="email" name="email" placeholder="please input your email">
+        <br>
+
+        <label for="password">Password: </label>
+        <input id="password" type="password" name="password" placeholder="please input your password">
+        <br>
+
+        <label for="sex">Sex: </label>
+        <input id="sex" type="radio" name="sex" checked>male
+        <input type="radio" name="sex">female
+        <br>
+
+        <label for="skill">Skill: </label>
+        <input id="skill" type="checkbox" name="tech">html+css
+        <input type="checkbox" name="tech">javascript
+        <input type="checkbox" name="tech">php
+        <input type="checkbox" name="tech">java
+        <br>
+
+        <label for="avatar">Avatar: </label>
+        <input id="avatar" type="file">
+        <br>
+
+        <label for="address">Current Address: </label>
+        <select name="" id="address" size="1">
+            <option value="Guangdong" selected>Guangdong</option>
+            <option value="other">Other</option>
+        </select>
+        <select size="1">
+            <option value="Guangzhou" selected>Guangzhou</option>
+            <option value="other">Other</option>
+        </select>
+        <select size="1">
+            <option value="Tianhe" selected>Tianhe</option>
+            <option value="other">Other</option>
+        </select>
+        <br>
+
+        <label>Comment: </label><textarea name="comment" cols="50" rows="10" placeholder="please input your comment here."></textarea><br>
+
+        <label for="code">Verification code: </label>
+        <input id="code" type="text" placeholder="please input the verification code">
+        <img src="" alt="Verification Code">
+        <br>
+
+        <input type="submit">&nbsp;&nbsp;<input type="reset">
+        
+
+    </form>
+
+</body>
+</html>

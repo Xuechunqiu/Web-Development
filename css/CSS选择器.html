@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css selector</title>
+    <style>
+        /** {*/
+        /*color:red;*/
+        /*}*/
+        /*标签选择器*/
+        /*span {*/
+            /*display: block;*/
+            /*margin-right: 20px;*/
+            /*border:1px solid gray;*/
+        /*}*/
+
+        /*类选择器*/
+        .wrapper{
+            color:aqua;
+        }
+        /*id选择器*/
+        #content {
+            color:pink;
+        }
+
+        /*派生选择器*/
+        .box1 {
+
+        }
+
+        .box2 li {
+            color:chartreuse;
+        }
+
+    </style>
+
+    <style type="text/css">
+        /*选择器分组*/
+        h1, .box, .p {
+            color: red;
+        }
+        p {
+            width:100px;
+            background-color: pink;
+        }
+
+        /*样式继承*/
+        .test {
+            font-size: 18px;
+        }
+        /*.test span {*/
+            /*font-weight: bold;*/
+        /*}*/
+        .test span {
+            font-weight: bold;
+            font-size: 12px; /*改写父元素传过来的样式*/
+        }
+
+    </style>
+
+</head>
+<body>
+    <p>这是p标签</p>
+    <strong>这是strong标签</strong>
+
+    <span>这是span标签</span>
+    <div>这是div标签</div>
+
+    <div class="wrapper">这是div标签</div>
+    <p class="wrapper">这是p标签</p>
+
+    <p id="content">This is content.</p>
+
+    <ul class="box1">
+        <li>li001</li>
+        <li>li002</li>
+        <li>li003</li>
+    </ul>
+    <ul class="box2">
+        <li>li001</li>
+        <li>li002</li>
+        <li>li003
+            <ul>
+                <li>subli1</li>
+                <li>subli2</li>
+            </ul>
+        </li>
+    </ul>
+
+    <!--分组-->
+    <h1>h1</h1>
+    <div class="box">box</div>
+    <p>p</p>
+
+    <!--继承-->
+    <div class="test">这是一段测试 <span>内容</span>。</div> <!--span是子元素-->
+
+    <!--样式权重-->
+    <p style="color: aqua">content1</p> <!--内联样式-->
+    <p>content2</p>
+
+</body>
+</html>

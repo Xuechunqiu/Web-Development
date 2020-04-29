@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS属性选择器</title>
+
+    <style>
+        div.content[title] {
+            font-weight: bold;
+        }
+
+        input[name=user]{
+            background-color: #999;
+        }
+
+        div[class~=box1]{
+            background-color: #e8a4ff;
+        }
+
+        div[class^=content2] {
+            background-color: pink;
+        }
+        
+        div[class$=box1]{
+            font-style: italic;
+        }
+
+        /*后代选择器*/
+        h1 strong{ /*h1空格strong表示h1后代中所有的strong*/
+            color: #fff;
+            background-color: #000;
+        }
+
+        /*儿子选择器*/
+        h1>strong {
+            color: red;
+        }
+
+        /*兄弟选择器*/
+        ul li+li+li { /*1.li:找到第一个<li>, 然后往后找*/
+            list-style-type: none;
+            color:red;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="content1 box1" title="内容">content1</div>
+    <div class="content2 box2">content2</div>
+
+    <form action="">
+        <input type="text" name="user">
+        <input type="text" name="account">
+    </form>
+
+    <!--关系选择器-->
+    <h1><strong>关系1</strong><span><strong>关系2</strong></span></h1>
+
+    <ul>
+        <li>li1</li>
+        <li>li2</li>
+        <li>li3</li>
+        <li>li4</li>
+        <li>li5</li>
+    </ul>
+</body>
+</html>

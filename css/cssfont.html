@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Font</title>
+    <style>
+        body {
+            /*background-color: #eeeeee;*/
+            /*background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT9zbyldRSa0KxgF_txsFuT6P-GtqAWN4jt9wmDIOQVwhnSChBy&usqp=CAU);*/
+            /*background-repeat: no-repeat;*/
+            /*background-position: 100px 50px;*/
+            /*background-attachment: scroll;*/
+            height: 2000px;
+            background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT9zbyldRSa0KxgF_txsFuT6P-GtqAWN4jt9wmDIOQVwhnSChBy&usqp=CAU) no-repeat scroll 100px 50px;
+
+        }
+        
+        p {
+            font-size: 18px;
+            font-family: "Adobe 宋体 Std L";
+            font-style: italic;
+            line-height: 2em;
+            /*text-indent: 30px;*/
+            text-indent: 2em; /*相对于当前字号的两个位置*/
+        }
+
+        p span {
+            font-weight: bold;
+            /*color: red;*/
+            /*color: rgb(255,0,0); !*r: 0-255, g: 0-255, b: 0-255 || 16进制（以#开头，后跟6位【#rrggbb】或3位【#rgb】16进制数*!*/
+            color: #ff0000; /*写成16进制更好*/
+        }
+        
+        em {
+            text-decoration: underline;
+        }
+        
+        div {
+            text-transform: capitalize; /*每个单词的首字母都会大写*/
+        }
+
+        strong {
+            font:italic small-caps bolder 18px/1.5 "Adobe 宋体 Std L";
+        }
+    </style>
+</head>
+<body>
+    <p> <span>BBC News: </span>不过，也有一些地方已经成功阻止病毒的快速蔓延。特别是几个亚洲国家或地区，尽管他们的地理位置与疫情最初爆发的中国只有“一箭之遥”，但却成为抗疫成功的领跑人。
+        美国 <em>约翰·霍普金斯大学</em>传染病专家内恩斯瓦教授（Tobert Nyenswah）告诉BBC：“我们需要向他们学习。”
+        “我并不仅指中国；中国的一些极端措施在其它民主国家可能很难实行。不过，其它地方使用了虽然不同但依然有效的抗疫方案。”</p>
+
+    <div>
+        How are you?
+    </div>
+
+    <strong>
+        我们需要向他们学习。China.
+    </strong>
+</body>
+</html>
